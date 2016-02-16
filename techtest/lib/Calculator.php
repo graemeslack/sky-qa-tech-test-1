@@ -22,6 +22,7 @@ class Calculator implements iCalculator {
         return ($a / $b);
     }
 
+<<<<<<< HEAD
     public function cubeRoot($a) {
 		return (pow($a, 1/3));
 	}
@@ -37,6 +38,8 @@ class Calculator implements iCalculator {
 		return dechex ($a);
 	}
 
+=======
+>>>>>>> 6bedc237f1302fb9090c3a6e6e32ac22dc63365d
     public function pressNumber($number) {
         $this->stack[] = $number;
     }
@@ -69,6 +72,7 @@ class Calculator implements iCalculator {
         $this->op = "/";
     }
 
+<<<<<<< HEAD
     public function pressCubeRoot() {
         if(count($this->stack) > 1) {
             $this->evaluateStack();
@@ -91,6 +95,8 @@ class Calculator implements iCalculator {
     }
 
 
+=======
+>>>>>>> 6bedc237f1302fb9090c3a6e6e32ac22dc63365d
     public function pressEquals() {
         return $this->evaluateStack();
     }
@@ -109,6 +115,7 @@ class Calculator implements iCalculator {
             case "/":
                 $result = $this->divide(array_shift($this->stack), array_shift($this->stack));
                 break;
+<<<<<<< HEAD
 			case "√":
                 $result = $this->cubeRoot(array_shift($this->stack), array_shift($this->stack));
                 break;
@@ -119,6 +126,8 @@ class Calculator implements iCalculator {
                 $result = $this->decToHex(array_shift($this->stack), array_shift($this->stack));
                 break;				
 				
+=======
+>>>>>>> 6bedc237f1302fb9090c3a6e6e32ac22dc63365d
         }
         $this->clearStack();
         $this->stack[] = $result;
